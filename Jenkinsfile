@@ -4,7 +4,8 @@ pipeline{
         stage("Sonar Check"){
             steps{
                 agent {
-                    docker { image 'openjdk:11' }
+                    docker { 
+                        image 'gradle:6.7-jdk11' }
                 }
                 script {
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
