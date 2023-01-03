@@ -4,7 +4,7 @@ pipeline{
         stage("Sonar Check"){
                 agent {
                     docker { 
-                        image 'gradle:6.7-jdk11' 
+                        image 'openjdk:11-jre-slim' 
                         reuseNode true
                     }
                 }
