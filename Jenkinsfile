@@ -5,6 +5,7 @@ pipeline{
                 agent {
                     docker { 
                         image 'gradle:6.7-jdk11' 
+                        reuseNode true
                     }
                 }
                 steps {
